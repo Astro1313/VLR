@@ -1,0 +1,218 @@
+body {
+    background-color: rgb(255, 255, 255);
+    font-family: 'Roboto', sans-serif;
+    background: #fff;
+    color: #23202a;
+    position: relative;
+
+
+}
+
+.textZAG {
+    font-size: 90px;
+    margin-left: 200px;
+    color: rgb(0, 0, 0);
+    -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, .2));
+}
+
+.textZAG2 {
+    font-size: 90px;
+    margin-left: 200px;
+    color: rgb(0, 0, 0);
+    -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, .2));
+}
+
+.text2 {
+    font-size: 35px;
+    
+    text-align: center;
+}
+
+.hrefAnim {
+    font-size: 45px;
+    color: rgb(0, 0, 0);
+    cursor: default;
+    text-decoration: none;
+    position: relative;
+
+
+    text-transform: uppercase;
+    animation: flip 2s infinite;
+    animation-delay: calc(.2s * var(--i))
+}
+
+.hrefAnim:hover {
+
+    color: #313133;
+    transform: rotateY(360deg);
+    position: relative;
+    display: inline-block;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    animation: waviy 1s infinite;
+    animation-delay: calc(.1s * var(--i));
+    animation: hrefAnim 1s;
+}
+
+@keyframes hrefAnim {
+
+    0%,
+    20%,
+    60%,
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    40% {
+        -webkit-transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+
+    80% {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+}
+
+.AboutUs {
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    cursor: default;
+    text-decoration: none;
+    position: relative;
+
+    margin-left: 800px;
+
+    text-transform: uppercase;
+    animation: flip 2s infinite;
+    animation-delay: calc(.2s * var(--i))
+}
+
+.AboutUs:hover {
+
+    color: #313133;
+    transform: rotateY(360deg);
+    position: relative;
+    display: inline-block;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    animation: waviy 1s infinite;
+    animation-delay: calc(.1s * var(--i));
+    animation: hrefAnim 1s;
+
+}
+
+.WorckWithUs {
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    cursor: default;
+    text-decoration: none;
+    position: relative;
+
+    margin-left: 925px;
+    text-transform: uppercase;
+    animation: flip 2s infinite;
+    animation-delay: calc(.2s * var(--i))
+}
+
+.WorckWithUs:hover {
+
+    color: #313133;
+    transform: rotateY(360deg);
+    position: relative;
+    display: inline-block;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    animation: waviy 1s infinite;
+    animation-delay: calc(.1s * var(--i));
+    animation: hrefAnim 1s;
+
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #fff;
+    color: #23202a;
+    position: relative;
+}
+
+.container {
+    max-width: 1140px;
+    padding: 0 16px;
+    margin: 0 auto;
+}
+
+.section {
+    text-align: center;
+    padding: 64px 0;
+}
+
+.h2 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 32px;
+}
+
+.image {
+    margin-bottom: 32px;
+}
+
+.image a {
+    border-radius: 8px;
+    max-width: 512px;
+    width: 100%;
+    height: 300px;
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.text {
+    font-size: 18px;
+    max-width: 512px;
+    margin: 0 auto;
+}
+
+/* Начальные стили для элемента, который будет следовать за курсором, в нашем случае небольшой кружок */
+.follow-cursor {
+    display: block;
+    width: 24px;
+    height: 24px;
+    border: 1px solid hwb(255 0% 0%);
+    border-radius: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    /* центрируем кружок */
+    position: absolute;
+    /* задаём абсолютное позиционирование, чтобы элемент не влиял на остальные элементы и его можно было бы позиционировать следом за курсором */
+    z-index: 999;
+    /* чтобы элемент был над остальными элементами */
+    pointer-events: none;
+    /* чтобы сквозь элемент можно было взаимодействовать с элементами, находящимися под ним */
+    transition: width 0.64s, height 0.64s, border-radius 0.64s, background 0.64s;
+}
+
+/* Активный класс для кружка при наведении на ссылку */
+.follow-cursor_active {
+    height: 128px;
+    width: 128px;
+    border-width: 2px;
+    background: rgba(13, 110, 253, 0.32);
+}
+
+/* Скрываем декоративный элемент при ширине браузера меньше 992px */
+@media (max-width: 991.98px) {
+    .follow-cursor {
+        display: none;
+    }
+
+
+}
